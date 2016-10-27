@@ -1,0 +1,21 @@
+{
+  "name": "ihc",
+  "description": "Trabalho de IHC Mackenzie",
+  "main": "index.js",
+  "authors": [
+    "Otto Henrique",
+    "Allan Gustavo Fernandes",
+    "Clauber Stipkovic"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ottohenrique/ihc",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
