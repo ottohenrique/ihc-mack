@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ottohenrique/ihc/issues"
   },
-  "homepage": "https://github.com/ottohenrique/ihc#readme"
+  "homepage": "https://github.com/ottohenrique/ihc#readme",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
 }
