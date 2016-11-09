@@ -3,9 +3,9 @@
         var name = $('#name').val();
     	var pass = $('#pass').val();
 
-        var lName = localStorage.getItem(name);
+        var lsName = localStorage.getItem(name);
 
-    	if ((lName !== null) && (lName === pass)) {
+    	if ((lsName !== null) && (lsName === pass)) {
     		redirecionar('./Procurar.html');
     	} else {
             $('#warningUserPass').removeClass('hide');
@@ -22,26 +22,36 @@
     	var senha = $('#senha').val();
     	var csenha = $('#csenha').val();
         var userTypeLength = $('input[name=userType]:checked').length;
+        var validForm = true;
 
-        console.log(typeof userTypeLength);
-
-        if ((email === '') || (senha === '') || (userTypeLength === 0)) {
+        if ((email === '') && (senha === '') && (userTypeLength === 0)) {
             $('#warningEmpty').removeClass('hide');
+            validForm = false;
         } else {
             if (email !== cemail) {
                 $('#warningEmail').removeClass('hide');
-        	} else  if (senha !== csenha) {
+                validForm = false;
+        	}
+
+            if (senha !== csenha) {
                 $('#warningPass').removeClass('hide');
-            } else if (userTypeLength === 0) {
+                validForm = false;
+            }
+
+            if (userTypeLength === 0) {
                 $('#warningPass').removeClass('hide');
-            } else {
-                if ($("#aluno").attr('checked')) {
-            		redirecionar('./Procurar.html');
-            	} else {
-            		redirecionar('./CadastroProfessor.html');
-            	}
+                validForm = false;
             }
         }
+
+        if (validForm) {
+            registerLocalStorage(email, senha);
+        }
+    }
+
+    function registerLocalStorage(email, senha) {
+        localStorage.setItem(email, senha);
+        redirecionar('./Procurar.html');
     }
 
     function main() {
