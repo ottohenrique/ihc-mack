@@ -5,9 +5,9 @@
     <title>Cadastro de Usuário</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="js/scripts.js"></script>
   </head>
   <body>
     <!-- Menu -->
@@ -50,19 +50,19 @@
         <form class="col-sm-6 col-sm-offset-3 clearfix" action="index.html" method="post">
           <fieldset class="row form-group">
             <div class="panel clearfix">
-              <input type="text" class="form-control" name="name" value="" placeholder="E-mail">
+              <input type="text" class="form-control" name="name" id="email" value="" placeholder="E-mail">
             </div>
 
             <div class="panel clearfix">
-              <input type="text" class="form-control" name="name" value="" placeholder="Confirmar de e-mail">
+              <input type="text" class="form-control" name="name" value="" id="cemail" placeholder="Confirmar de e-mail">
             </div>
 
             <div class="panel clearfix">
-              <input type="password" class="form-control" name="name" value="" placeholder="Senha">
+              <input type="password" class="form-control" name="name" value="" id="senha" placeholder="Senha">
             </div>
 
             <div class="panel clearfix">
-              <input type="password" class="form-control" name="name" value="" placeholder="Confirmar senha">
+              <input type="password" class="form-control" name="name" value="" id="csenha" placeholder="Confirmar senha">
             </div>
 
             <div class="panel clearfix">
@@ -71,8 +71,8 @@
             </div>
 
             <div class="panel col-sm-6 col-sm-offset-3">
-              <button type="button" class="col-sm-5 btn btn-danger" name="">Cancelar</button>
-              <button type="button" class="col-sm-5 col-sm-offset-2 btn btn-success" name="">Ok</button>
+              <button type="button" class="col-sm-5 btn btn-danger" name="" OnClick="redirecionar('.')">Cancelar</button>
+              <button type="button" class="col-sm-5 col-sm-offset-2 btn btn-success" name="" OnClick="validar()">Ok</button>
             </div>
           </fieldset>
         </form>
