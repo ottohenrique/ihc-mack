@@ -30,23 +30,18 @@
         } else {
             if (email !== cemail) {
                 $('#warningEmail').removeClass('hide');
-        	}
-
-        	if (senha !== csenha) {
+        	} else  if (senha !== csenha) {
                 $('#warningPass').removeClass('hide');
-        	}
-
-            if (userTypeLength === 0) {
+            } else if (userTypeLength === 0) {
                 $('#warningPass').removeClass('hide');
+            } else {
+                if ($("#aluno").attr('checked')) {
+            		redirecionar('./Procurar.html');
+            	} else {
+            		redirecionar('./CadastroProfessor.html');
+            	}
             }
         }
-
-        // TODO: Terminar de implementar a validacao e o redirect para o cadastro
-    	// if ($("#aluno").attr('checked')) {
-    	// 	redirecionar('./Procurar.html');
-    	// } else {
-    	// 	redirecionar('./CadastroProfessor.html');
-    	// }
     }
 
     function main() {
