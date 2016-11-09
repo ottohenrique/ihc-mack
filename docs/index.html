@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="js/scripts.js"></script>
   </head>
   <body>
     <div class="container">
@@ -24,12 +23,14 @@
               <input type="password" class="form-control" name="name" id="pass" value="" placeholder="Senha">
             </div>
             <div class="panel col-sm-12">
-              <button type="button" class="col-xs-5 col-sm-5 btn btn-primary" name="" OnClick="redirecionar('./CadastroUsuario.html')">Criar conta</button>
-              <button type="button" class="col-xs-5 col-sm-5 col-sm-offset-2 btn btn-success" name="" OnClick="login()">Login</button>
+              <a href="CadastroUsuario.html" class="col-xs-5 col-sm-5 btn btn-primary">Criar conta</a>
+              <button type="button" id="doLogin" class="col-xs-5 col-sm-5 col-sm-offset-2 btn btn-success" name="">Login</button>
             </div>
           </fieldset>
         </form>
       </div>
     </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
   </body>
 </html>
