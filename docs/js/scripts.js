@@ -6,10 +6,10 @@ function login () {
 		redirecionar('./Procurar.html');
 	} else {
 		if (name == "") {
-			alert('E-mail não preenchido')
+			alert('E-mail não preenchido');
 		}else{
 			if (pass == "") {
-				alert('Senha não preenchida')
+				alert('Senha não preenchida');
 			} else { 
 				alert('Usuário ou senha incorreto');
 			}
