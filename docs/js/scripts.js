@@ -26,11 +26,11 @@ function validar() {
 
 
 	if (email != cemail) {
-		alert("O e-mail é diferente!")
+		alert("O e-mail é diferente!");
 	}
 
 	if (senha != csenha) {
-		alert("A senha é diferente!")
+		alert("A senha é diferente!");
 	}
 
 	if (document.getElementById("aluno").checked) {
