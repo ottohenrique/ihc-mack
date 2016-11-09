@@ -1,21 +1,14 @@
 (function($) {
     function doLogin(e) {
-        // console.log(localStorage.getItem('email'));
-        var name = document.getElementById('name').value;
-    	var pass = document.getElementById('pass').value;
+        var name = $('#name').val();
+    	var pass = $('#pass').val();
 
-    	if ((name == 'aluno@teste.com.br' || name == 'professor@teste.com.br') && pass == '123456') {
+        var lName = localStorage.getItem(name);
+
+    	if ((lName !== null) && (lName === pass)) {
     		redirecionar('./Procurar.html');
     	} else {
-    		if (name == "") {
-    			alert('E-mail não preenchido');
-    		}else{
-    			if (pass == "") {
-    				alert('Senha não preenchida');
-    			} else {
-    				alert('Usuário ou senha incorreto');
-    			}
-    		}
+            $('#warningUserPass').removeClass('hide');
     	}
     }
 
@@ -28,7 +21,6 @@
     	var cemail = $('#cemail').val();
     	var senha = $('#senha').val();
     	var csenha = $('#cenha').val();
-
 
     	if (email != cemail) {
     		alert("O e-mail é diferente!");
