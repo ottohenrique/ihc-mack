@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Cadastro de Professor</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -43,50 +43,59 @@
     <div class="container">
       <div class="row">
         <h1 class="col-sm-12 text-center">Classe Fácil</h1>
-        <h2 class="col-sm-12 text-center">Anunciar</h2>
+        <h2 class="col-sm-12 text-center">Cadastro de Professor - Escolaridade</h2>
         <img src="./img/logo.jpg" alt="" class="img-responsive center-block" />
 
-        <form class="col-sm-6 col-sm-offset-3 clearfix" action="index.html" method="post">
+        <form class="col-sm-6 col-sm-offset-3 clearfix" action="Anunciar.html" method="post">
           <fieldset class="row form-group">
             <div class="panel clearfix">
-              <label for="atual" class="col-sm-12"><input type="radio" id="atual" name="local">&nbsp;Localização atual</label>
-              <label for="outro" class="col-sm-12"><input type="radio" id="outro" name="local">&nbsp;Outro localidade</label>
-            </div>
-
-            <div class="panel clearfix">
               <select name="" class="form-control">
-                <option value="">País</option>
+                <option value="">Escolaridade</option>
+                <option value="">Ensino médio</option>
               </select>
             </div>
 
             <div class="panel clearfix">
-              <select name="" class="form-control">
-                <option value="">Estado</option>
-              </select>
-            </div>
-
-            <div class="panel clearfix">
-              <select name="" class="form-control">
-                <option value="">Cidade</option>
-              </select>
-            </div>
-
-            <div class="panel clearfix">
-              <select name="" class="form-control">
-                <option value="">Região</option>
-              </select>
+              <button type="button" class="btn btn-primary col-md-6 col-md-offset-3 clearfix" data-toggle="modal" data-target=".conhecimento">Informar dados de conhecimento</button>
             </div>
 
             <div class="panel col-sm-12">
-              <button type="button" class="col-xs-5 col-sm-5 btn btn-primary" name="">Voltar</button>
-              <button type="button" class="col-xs-5 col-sm-5 col-sm-offset-2 btn btn-success" name="">Localizar</button>
+              <button type="button" class="col-sx-5 col-md-5 btn btn-danger" name="">Cancelar</button>
+              <button type="button" id="signUpValidationProfessor" class="col-xs-5 col-xs-offset-2 col-md-5 col-md-offset-2 btn btn-success">Ok</button>
             </div>
           </fieldset>
         </form>
       </div>
     </div>
 
+    <div class="modal fade conhecimento" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content col-md-12">
+          <h3>Conhecimento</h3>
+            <div class="panel clearfix">
+              <select name="" class="form-control">
+                <option value="">Área de conhecimento</option>
+                <option value="">Exatas</option>
+              </select>
+            </div>
+
+            <div class="panel clearfix">
+              <select name="" class="form-control">
+                <option value="">Área de atuação</option>
+                <option value="">Programação</option>
+              </select>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Cadastrar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="js/scripts.js"></script>
   </body>
 </html>

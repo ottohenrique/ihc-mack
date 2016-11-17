@@ -45,18 +45,34 @@
         }
 
         if (validForm) {
-            registerLocalStorage(email, senha);
+            var userType = $('input[name=userType]:checked').val();
+            registerLocalStorage(email, senha, userType);
         }
     }
 
-    function registerLocalStorage(email, senha) {
+    function registerLocalStorage(email, senha, userType) {
         localStorage.setItem(email, senha);
-        redirecionar('./Procurar.html');
+
+        if (userType === 'aluno') {
+            redirecionar('./Procurar.html');
+        } else {
+            redirecionar('./CadastroProfessor.html');
+        }
+    }
+
+    function signUpValidationProfessor() {
+        redirecionar('./Anunciar.html');
+    }
+
+    function signUpValidationProfessorEscolaridade() {
+        redirecionar('./CadastroProfessor-Escolaridade.html');
     }
 
     function main() {
         $('#doLogin').click(doLogin);
         $('#signUpValidation').click(signUpValidation);
+        $('#signUpValidationProfessor').click(signUpValidationProfessor);
+        $('#signUpValidationProfessorEscolaridade').click(signUpValidationProfessorEscolaridade);
     }
 
     main();

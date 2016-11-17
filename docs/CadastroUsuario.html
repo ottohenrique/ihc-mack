@@ -46,26 +46,26 @@
         <h2 class="col-md-12 text-center">Cadastro de usuário</h2>
         <img src="./img/logo.jpg" alt="" class="img-responsive center-block" />
 
-		<div id="warningEmail" class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-			<strong>E-mail incorreto!</strong> Verifique os dados informados.
-		</div>
+        <div id="warningEmail" class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <strong>E-mail incorreto!</strong> Verifique os dados informados.
+        </div>
 
-		<div id="warningPass" class="col-md-8 col-md-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-			<strong>Senha incorreta!</strong> Verifique os dados informados.
-		</div>
+    		<div id="warningPass" class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
+    			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    				<span aria-hidden="true">×</span>
+    			</button>
+    			<strong>Senha incorreta!</strong> Verifique os dados informados.
+    		</div>
 
-		<div id="warningEmpty" class="col-md-8 col-md-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-			<strong>Dados não informados!</strong> Verifique os dados informados.
-		</div>
+    		<div id="warningEmpty" class="col-md-8 col-md-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
+    			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    				<span aria-hidden="true">×</span>
+    			</button>
+    			<strong>Dados não informados!</strong> Verifique os dados informados.
+    		</div>
 
         <form class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 clearfix" action="index.html" method="post">
           <fieldset class="row form-group">
@@ -86,17 +86,17 @@
             </div>
 
             <div class="panel clearfix">
-				<label for="aluno" class="col-sm-12">
-					<input type="radio" id="aluno" name="userType">&nbsp;Aluno
-				</label>
-              	<label for="professor" class="col-sm-12">
-					<input type="radio" id="professor" name="userType">&nbsp;Professor
-			 	</label>
+      				<label for="aluno" class="col-sm-12">
+      					<input type="radio" id="aluno" name="userType" value="aluno">&nbsp;Aluno
+      				</label>
+                    	<label for="professor" class="col-sm-12">
+      					<input type="radio" id="professor" name="userType" value="professor">&nbsp;Professor
+      			 	</label>
             </div>
 
             <div class="panel col-sm-12">
               <button type="button" class="col-sm-5 btn btn-danger" OnClick="redirecionar('.')">Cancelar</button>
-              <button type="submit" id="signUpValidation" class="col-sm-5 col-sm-offset-2 btn btn-success">Ok</button>
+              <button type="button" id="signUpValidation" class="col-sm-5 col-sm-offset-2 btn btn-success">Ok</button>
             </div>
           </fieldset>
         </form>

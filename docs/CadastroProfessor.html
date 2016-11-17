@@ -46,60 +46,36 @@
         <h2 class="col-sm-12 text-center">Cadastro de Professor</h2>
         <img src="./img/logo.jpg" alt="" class="img-responsive center-block" />
 
-		<div id="warningEmail" class="col-sm-8 col-sm-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-			<strong>E-mail incorreto!</strong> Verifique os dados informados.
-		</div>
-
-		<div id="warningPass" class="col-sm-8 col-sm-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-			<strong>Senha incorreta!</strong> Verifique os dados informados.
-		</div>
-
-		<div id="warningEmpty" class="col-sm-8 col-sm-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-			<strong>Dados não informados!</strong> Verifique os dados informados.
-		</div>
-
-		<div id="warningProfile" class="col-sm-8 col-sm-offset-2 alert alert-warning alert-dismissible fade in hide" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-			<strong>Perfil não informado!</strong> Informe um perfil.
-		</div>
-
-        <form class="col-sm-6 col-sm-offset-3 clearfix" action="index.html" method="post">
+        <form class="col-sm-6 col-sm-offset-3 clearfix" method="post">
           <fieldset class="row form-group">
             <div class="panel clearfix">
-              <input type="text" id="email" class="form-control" placeholder="E-mail">
+              <select name="" class="form-control">
+                <option value="">País</option>
+                <option value="">Brasil</option>
+              </select>
             </div>
 
             <div class="panel clearfix">
-              <input type="text" id="cemail" class="form-control" placeholder="Confirmar de e-mail">
+              <select name="" class="form-control">
+                <option value="">Estado</option>
+                <option value="">São Paulo</option>
+              </select>
             </div>
 
             <div class="panel clearfix">
-              <input type="password" id="senha" class="form-control" placeholder="Senha">
+              <select name="" class="form-control">
+                <option value="">Cidade</option>
+                <option value="">São Paulo</option>
+              </select>
             </div>
 
             <div class="panel clearfix">
-              <input type="password" id="csenha" class="form-control" placeholder="Confirmar senha">
-            </div>
-
-            <div class="panel clearfix">
-              <label for="aluno" class="col-sm-12"><input type="radio" id="aluno" name="userType">&nbsp;Aluno</label>
-              <label for="professor" class="col-sm-12"><input type="radio" id="professor" name="userType">&nbsp;Professor</label>
+              <textarea name="name" class="form-control" rows="8" cols="40" placeholder="Descrição de atividade"></textarea>
             </div>
 
             <div class="panel col-sm-12">
               <button type="button" class="col-sx-5 col-md-5 btn btn-danger" name="">Cancelar</button>
-              <button type="button" id="signUpValidation" class="col-xs-5 col-xs-offset-2 col-md-5 col-md-offset-2 btn btn-success">Ok</button>
+              <button type="button" id="signUpValidationProfessorEscolaridade" class="col-xs-5 col-xs-offset-2 col-md-5 col-md-offset-2 btn btn-success">Ok</button>
             </div>
           </fieldset>
         </form>
